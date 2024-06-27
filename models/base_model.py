@@ -1,16 +1,12 @@
 #!/usr/bin/python3
 """This module defines a base class for all models in our hbnb clone"""
 import models
-import uuid
+from uuid import uuid4
 from datetime import datetime
-from models import storage
-from os import getenv
-from models.base_model import Base
-from models.base_model import BaseModel
-from models.city import City
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column
+from sqlalchemy import DateTime
 from sqlalchemy import String
-from sqlalchemy.orm import relationship
 
 
 Base = declarative_base()
@@ -57,4 +53,5 @@ class BaseModel:
     
     def delete(self):
         """Delete the current instance from storage."""
+        from models import storage
         models.storage.delete(self)
