@@ -30,7 +30,7 @@ def c_text(text):
 @app.route("/python/<text>", strict_slashes=False)
 def python_text(text = "is cool"):
     """display “C ” followed by the value of the text variable"""
-    return 'C ' + text.replace('_', ' ')
+    return 'Python ' + text.replace('_', ' ')
 
 
 if __name__ == "__main__":
