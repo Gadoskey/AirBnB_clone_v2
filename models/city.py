@@ -7,6 +7,7 @@ from sqlalchemy import ForeignKey
 from sqlalchemy import String
 from sqlalchemy.orm import relationship
 
+
 class City(BaseModel, Base):
     """ The city class inherits from BaseModel and Base """
     __tablename__ = "cities"
